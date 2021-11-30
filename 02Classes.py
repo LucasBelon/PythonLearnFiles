@@ -1,4 +1,8 @@
 # coding: utf-8
+"""
+Author: Lucas Gouveia Belon
+This file is part of a great summary about Python
+"""
 # 006 file ------------------------------------------
 """
 Objects are classes instancies, so they share inheritance in functionalities

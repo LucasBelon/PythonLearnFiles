@@ -1,4 +1,8 @@
 # coding: utf-8
+"""
+Author: Lucas Gouveia Belon
+This file is part of a great summary about Python
+"""
 # File 011 OpenClose -----------------------------------------------------------
 """
 We can access files in diferent modes. The first is the read mode.

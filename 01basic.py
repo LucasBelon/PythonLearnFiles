@@ -1,5 +1,8 @@
 # coding: utf-8
-
+"""
+Author: Lucas Gouveia Belon
+This file is part of a great summary about Python
+"""
 # 001 file, strings
 # Strings study
 # It's recommended to use only one type of quote to keep the code clean
