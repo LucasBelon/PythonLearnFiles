@@ -56,7 +56,7 @@ class Mage:
         # String shown when we do print(Mage)
         return f'\nName: {self.name}\nLife Points: ' \
                f'{self.life}\nMana Points: {self.mana}\nStrength' \
-               f': {self.strength}\nGasto Mágico: {self.magic}\n' \ 
+               f': {self.strength}\nGasto Mágico: {self.magic}\n' \
                f'Speed: {self.speed}\n '
 
     # In class definitions there are a few elements called as 'decorators'
@@ -335,7 +335,7 @@ print(ford.__doc__)
 class RunTimeErrorOnMyCode(TypeError):
     """Exception lauched when an "Oh shit" error happens."""
 
-    def __init__(self, code=500, message="Oh shit. There's" \ 
+    def __init__(self, code=500, message="Oh shit. There's" \
             " something wrong here"):
         super().__init__(f'Error code: {code}; {message}')
         self.code = code
@@ -344,7 +344,7 @@ class RunTimeErrorOnMyCode(TypeError):
 # raise MyCustomError("Oh Shit. There's something wrong here", 500)
 err = RunTimeErrorOnMyCode()
 print(err.__doc__)
-raise err
+#raise err <-- This statement force the error raise
 
 # File 009 TryExceptError
 
@@ -389,4 +389,4 @@ except ValueError:
     print('A ValueError raised')
 finally:
     print(f'The garage now has {len(ford)} cars')
-
+print('This program ended')
