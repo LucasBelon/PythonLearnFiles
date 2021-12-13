@@ -95,5 +95,85 @@ travel through them with it's index. The numbers will be there, and won't
 fade away as we run the __next__ method. That's what makes it iterable,
 although the first method is a iterator. It's kind of confusing, but
 it's more important to understand what things do them to understand this
-silly names"""
+silly names
+"""
+# File 018 Iter-Able-Ator.py -------------------------------------
+"""
+Now that we've seen that not always an iterator is iterable, we'll turn a 
+iterator into a iterable, with some magic methods.
+Remember, a list is a container, with n elements, where we can go back and
+forwards, in a way that any element is lost. Sometimes we want to be able
+to lose some data, we want to read, process and destroy. This way we're able to
+keep low memory in usage.
+"""
+
+"""
+class FirstHundredGenerator:
+    def __init__(self):
+        self.number = 0
+
+    def __next__(self):
+        if self.number < 100:
+            current = self.number
+            self.number += 1
+            return current
+        else:
+            raise StopIteration()
+
+
+class FirstHundredIterable:
+    def __iter__(self):
+        return FirstHundredGenerator()
+
+
+print(sum(FirstHundredIterable()))
+
+for i in FirstHundredIterable():
+    print(i)
+"""
+# You can see that we added a single method in a children class, that inherit
+# the __init__ and __next__ dunder methods. This way we are able to create
+# a container with a kind of 'get' method, and we are able to move the cursor
+# around the elements. It enables searches, seek methods, and many common tools
+# of common lists.
+
+
+class FirstHundredGenerator:
+    def __init__(self):
+        self.number = 0
+
+    def __next__(self):
+        if self.number < 100:
+            current = self.number
+            self.number += 1
+            return current
+        else:
+            raise StopIteration()
+
+    def __iter__(self):
+        return self
+
+
+# print(sum(FirstHundredGenerator())
+
+# for i in FirstHundredGenerator():
+#    print(i, end = ' ')
+
+class AnotherIterable:
+    def __init__(self):
+        self.cars = ['fiesta', 'focus', 'chevrolet']
+
+    def __len__(self):
+        return len(self.cars)
+
+    def __getitem__(self, item):
+        return self.cars[item]
+
+for cars in AnotherIterable():
+    print(cars)
+
+my_numbers = [x for x in [1, 2,3 ,4 ,5] ] # List Compreension
+my_numbers_gen = (x for x in [1, 2, 3, 4, 5] )
+# The above line returns a generator. It's not a tuple compreension!
+print(type(my_numbers_gen))
 
