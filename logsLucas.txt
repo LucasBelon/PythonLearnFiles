@@ -1,8 +1,0 @@
-25-12-2021 07:17:50 INFO     [08Time_Regex_Log.py:124] This is a info message
-25-12-2021 07:17:50 WARNING  [08Time_Regex_Log.py:125] This is a warning message
-25-12-2021 07:17:50 DEBUG    [08Time_Regex_Log.py:126] This is a debug message
-25-12-2021 07:17:50 CRITICAL [08Time_Regex_Log.py:127] This is a critical message
-25-12-2021 07:18:43 INFO     [08Time_Regex_Log.py:124] This is a info message
-25-12-2021 07:18:43 WARNING  [08Time_Regex_Log.py:125] This is a warning message
-25-12-2021 07:18:43 DEBUG    [08Time_Regex_Log.py:126] This is a debug message
-25-12-2021 07:18:43 CRITICAL [08Time_Regex_Log.py:127] This is a critical message
