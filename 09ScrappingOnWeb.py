@@ -44,7 +44,8 @@ def find_subtitle():
 
 def find_other_paragraph():
     paragraphs = simple_soup.find_all('p')
-    other_paragraph = [p for p in paragraphs if 'subtitle' not in p.attrs.get('class', [])]
+    other_paragraph = [p for p in paragraphs 
+            if 'subtitle' not in p.attrs.get('class', [])]
     print(other_paragraph[0].string)
 
 
@@ -305,7 +306,7 @@ print(item.rating)
 print(item.name)
 print(item.link)
 
-# file 03RequestWebPage.py ----------------------------------------------------
+# file 036RequestWebPage.py ----------------------------------------------------
 import requests
 from bs4 import BeautifulSoup
 
