@@ -1,0 +1,34 @@
+Instruções de execução:
+Caso tenha instalado o python3.6 ou versão mais recente em sua máquina, execute o programa
+main.py e siga as instruções.
+Este programa não gera outros arquivos em sua máquina, portanto, não há necessidade
+de executá-lo em uma pasta isolada. Todos os dados são gerados em tempo de execução.
+Este programa foi construído para aceitar qualquer valor de n, apesar de valores
+demasiadamente grandes de n apresentarem erro. Por conta disso foi testado valor
+por valor, e o máximo recomendado para se utilizar é n=23.
+Após isso o tempo de processamento excede 5 minutos, o que não é razoável para avaliação
+visando dar nota ao trabalho.
+
+Instruções dentro do programa:
+Será pedido o número de nós 'n' a ser utilizado no cálculo. Este pode ser um inteiro
+entre 2 e 23, não podendo ser 1, e não recomenda-se que seja, por exemplo 34 (apesar
+de o programa funcionar com tal).
+Em seguida será pedida a função a ser executada. No enunciado são discriminadas 
+2 integrais para cada exemplo. Você poderá escolher qual delas será executada pelo 
+menu numérico.
+Todos os exemplos levam menos de um segundo para serem executados com n = 10.
+
+Bibliotecas e funções não desenvolvidas pelo grupo usadas:
+Bibliotecas - 
+Como todas as raízes e pesos são gerados em tempo de processamento, uma biblioteca para
+se facilitar as múltiplas combinações de termos foi utilizada, mais exatamente para o cálculo dos pesos. Essa foi a função itertools.combinations()
+Para que se pudesse definir algumas funções e obter o resultado exato de algumas integrais
+foram utilizadas duas operações e duas constantes do módulo math, sendo estas math.sqrt(), math.pi, math.e, math.erf().
+Funções - 
+Foi obtido em um repositório do github uma função que calcula um valor do polinômio de legendre para um valor n. Esse foi utilizado para se obter as raízes do polinômio.
+https://github.com/Hevenicio/Legendre-Polynomials-in-Python/blob/master/Legendre.py
+Foi usado como base o pseudo código disponível no livro análise numérica de Burden & Faires, de forma adaptada para se adequar às funções definidas no próprio exercício programa. Tal pseudo-código é aplicado na função calcIntegral(), na linha 374.
+
+OBS:
+Para facilitar a legibilidade e a compreensão entre os colegas, foi optado por definir as funções na ordem em que essas ocorrem no próprio programa, e executá-las em seguida, em discordância com o padrão de boas práticas, em que as definições de funções se encontram separadas de sua execução.
+Esse programa possui uma chamada da função input() para que o programa possa ser executado e lido em um prompt de comando do windows.
