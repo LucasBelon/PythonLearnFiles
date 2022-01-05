@@ -1,5 +1,6 @@
 from itertools import combinations
 
+
 def completa_raizes(lista, flag):
     """
     A partir dos pontos obtidos em que há a troca de sinal utilizamos essa
@@ -21,6 +22,7 @@ def completa_raizes(lista, flag):
     for i in range(len(lista)):
         raizes.append((lista[i][0] + lista[i][1]) / 2)
     return raizes
+
 
 def pesos_Wi(lista, n, a, b):
     """
