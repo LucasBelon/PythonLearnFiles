@@ -5,7 +5,7 @@ https://github.com/Hevenicio/Legendre-Polynomials-in-Python/blob/master/Legendre
 Pseudo-código do livro Burden & Faires quanto à integral dupla do método de gauss
 """
 
-def main(n, opcao_da_funcao):
+def main():
     from time import time
     start = time()
 
@@ -49,9 +49,8 @@ não é recomendado, a não ser que sua máquina tenha um clock de processador
 praticamente infinito e sua memória RAM seja maior do que 64GB.
 A precisão utilizada é de {str(precisao_da_aproximacao)}.
 """
-    #print(string)
+    print(string)
 
-    """
     n = int(
         input(
         "Diga quantos nós devem existir [são aceitos apenas números inteiros]: "
@@ -65,7 +64,7 @@ A precisão utilizada é de {str(precisao_da_aproximacao)}.
                     existir [são aceitos apenas números inteiros]: "
             )
             )
-    """
+
     string = """Digite o número da função que você deseja executar:
 Exemplo 1
 Função f(x, y) = 1; limite inferior g(x) = 0; limite superior h(x) = 1           - Tecle [1]
@@ -76,14 +75,14 @@ f(x, y) = 1; limite inferior g(x) = 0; limite superior h(x) = sqrt(1-x)         
 Exemplo 3
 f(x, y) = e^(y/x); limite inferior g(x) = x^3; limite superior h(x)=x^2          - Tecle [5]
 f(x, y) = sqrt( (((y*(e^(y/x)))/(x^2))^2) + (((e^(y/x))/x)^2) + 1); 
-limite inferior g(x) = x^3; limite superior h(x)=x^2                            - Tecle [6]
+limite inferior g(x) = x^3; limite superior h(x)=x^2                             - Tecle [6]
 Exemplo 4
 f(x, y) = |x|; limite inferior g(x) = 3/4; limite superior h(x) = sqrt(1-x^2)    - Tecle [7]
 f(x, y) = |y|; limite inferior g(x) = 0; limite superior h(x) = e^-x^2           - Tecle [8]"""
-    #print(string)
+    print(string)
 
 
-    # opcao_da_funcao = int(input("Sua escolha: "))
+    opcao_da_funcao = int(input("Sua escolha: "))
     while opcao_da_funcao not in range(1, 9):
         print("Escolha uma função válida, um número inteiro de 1 a 8")
         opcao_da_funcao = int(input("Sua escolha: "))
@@ -229,14 +228,8 @@ retifica=retifica, raiz=raiz, pesos=pesos, valor_round=valor_round
 ))}
 O valor exato da integral é:     {str(funcao["resultado_exato"])}
 O valor de 'n' que você escolheu é: {n}
-O tempo gasto foi de {round(time() - start, 2)} segundos"""
-    #print(string_final)
-    print(f"\nO tempo gasto foi de {round(time() - start, 4)} segundos \
-            \nn={n} e \
-            \nopcaofuncao = {opcao_da_funcao}\
-            \nvalorIntegral = {str(calcIntegral(dicio=funcao ,retifica=retifica, raiz=raiz, pesos=pesos, valor_round=valor_round))}"
-        )
+O tempo gasto foi de {round(time() - start, 4)} segundos"""
+    print(string_final)
 
-for i in range(2, 34):
-    main(n=i, opcao_da_funcao=5)
-# input("O programa terminou. Tecle enter para sair")
+main()
+input("O programa terminou. Tecle enter para sair")
